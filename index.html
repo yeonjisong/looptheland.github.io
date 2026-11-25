@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="어한달 시즌 3 강릉 170K 릴레이 코스 및 운영 대시보드" />
+    <title>어한달 시즌 3 강릉 | 코스 운영 대시보드</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <div>
+          <p class="eyebrow">LOOP THE LAND · SEASON 03 · GANGNEUNG</p>
+          <h1>어한달 시즌 3 <span>강릉</span></h1>
+          <p class="subtitle">170K 릴레이 · 코스 및 운영 대시보드</p>
+        </div>
+        <button class="button header-button" id="theme-toggle" type="button">◐ 다크 모드</button>
+      </div>
+    </header>
+
+    <main class="shell page-content">
+      <section class="overview" aria-labelledby="overview-title">
+        <div class="section-heading">
+          <div><p class="eyebrow eyebrow-dark">RACE OVERVIEW</p><h2 id="overview-title">전체 코스 요약</h2></div>
+          <span class="overview-note">구간별 통과 시간 기준 · 운영 초안</span>
+        </div>
+        <div class="metrics">
+          <article class="metric"><span>총 거리</span><strong>170 <small>km</small></strong><em>17개 구간</em></article>
+          <article class="metric"><span>누적 상승</span><strong>4,490 <small>m</small></strong><em>Elevation gain</em></article>
+          <article class="metric"><span>누적 하강</span><strong>4,510 <small>m</small></strong><em>Elevation loss</em></article>
+          <article class="metric"><span>출발 예정</span><strong>05:00</strong><em>주문진 도깨비 방파제</em></article>
+          <article class="metric"><span>도착 예정</span><strong>00:00</strong><em>다음 날 · 포이푸서프</em></article>
+          <article class="metric"><span>예상 일정</span><strong>19 <small>시간</small></strong><em>잠정 일정</em></article>
+        </div>
+        <div class="sun-notice"><span>🌅 일출 <strong>07:18</strong> · 3구간</span><span>🌇 일몰 <strong>17:06</strong> · 11구간</span></div>
+      </section>
+
+      <section class="panel" aria-labelledby="routes-title">
+        <div class="panel-heading">
+          <div><p class="eyebrow eyebrow-dark">ROUTE & OPERATIONS</p><h2 id="routes-title">구간별 운영표</h2><p>전체 구간 정보가 표시됩니다. 상세 버튼을 눌러 주요 포인트와 운영 메모를 확인하세요.</p></div>
+          <span class="count-badge" id="section-count">17 / 17 구간</span>
+        </div>
+        <div class="toolbar">
+          <label class="search"><span aria-hidden="true">⌕</span><input id="section-search" type="search" placeholder="구간, 코스, 팀 검색" /><span class="sr-only">구간 검색</span></label>
+          <p>거리와 고도 괄호 안은 누적 수치입니다.</p>
+        </div>
+        <p class="mobile-hint">작은 화면에서는 구간별 카드로 표시됩니다.</p>
+        <div class="table-scroll" tabindex="0" aria-label="구간별 운영표">
+          <table class="route-table">
+            <caption class="sr-only">강릉 170K 릴레이 구간별 운영 정보</caption>
+            <colgroup><col class="col-section" /><col class="col-route" /><col class="col-gpx" /><col class="col-team" /><col class="col-metric" /><col class="col-metric" /><col class="col-metric" /><col class="col-time" /><col class="col-difficulty" /><col class="col-vehicle" /><col class="col-assignment" /></colgroup>
+            <thead><tr><th>구간</th><th>코스 / 누적 범위</th><th>GPX</th><th>팀 / 주자</th><th>거리</th><th>상승</th><th>하강</th><th>예정 시간</th><th>난이도</th><th>차량</th><th>포토 / 운전자</th></tr></thead>
+            <tbody id="section-rows"><tr><td colspan="11" class="loading">구간 정보를 불러오는 중…</td></tr></tbody>
+          </table>
+        </div>
+        <div class="panel-footer"><span>난이도 1–10 · 거리 km · 고도 m</span><span>담당자 변경 내용은 이 브라우저에 저장됩니다.</span></div>
+        <p class="safety-note">9구간 촬영 주자는 주행과 촬영이 겹치지 않을 때만 운전 교대하세요. 주행 직후 피로하면 차량 이동을 늦추거나 대체 운전자를 배정하세요.</p>
+      </section>
+
+      <section class="panel download-panel" aria-labelledby="download-title">
+        <div class="panel-heading"><div><p class="eyebrow eyebrow-dark">DOWNLOADS</p><h2 id="download-title">전체 코스 GPX</h2><p>전체 경로 파일을 직접 내려받습니다.</p></div></div>
+        <div class="download-row"><div><strong>강릉 전체 코스</strong><small>전체 트랙 · 17개 구간</small></div><a class="button primary" href="gpx/full-course.gpx" download>↓ 전체 GPX 다운로드</a></div>
+        <p class="download-note">구간별 GPX는 각 구간 행의 다운로드 버튼에서 받을 수 있습니다.</p>
+      </section>
+
+      <p class="footnote">운영 초안 v1.0 · 지명 및 안전 정보는 제공된 원본 기준이며 현장 확인이 필요합니다.</p>
+    </main>
+
+    <dialog id="assignment-dialog">
+      <form id="assignment-form">
+        <div class="dialog-heading"><div><p class="eyebrow eyebrow-dark">TEAM ASSIGNMENT</p><h2 id="dialog-title">담당자 입력</h2></div><button class="close-button" id="dialog-close" type="button" aria-label="닫기">×</button></div>
+        <p class="dialog-note">포토와 운전자 정보는 이 브라우저에 저장됩니다.</p>
+        <label class="field">포토 <input id="photo-input" maxlength="100" placeholder="예: 치원, 정우" /></label>
+        <div class="driver-fields"><label class="field">운전자 1<input id="driver-1" maxlength="50" /></label><label class="field">운전자 2<input id="driver-2" maxlength="50" /></label><label class="field">운전자 3<input id="driver-3" maxlength="50" /></label><label class="field">운전자 4<input id="driver-4" maxlength="50" /></label></div>
+        <div class="dialog-actions"><button class="button" id="dialog-cancel" type="button">취소</button><button class="button primary" type="submit">저장</button></div>
+      </form>
+    </dialog>
+    <div id="announcements" class="sr-only" aria-live="polite"></div>
+  </body>
+</html>
