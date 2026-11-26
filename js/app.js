@@ -83,9 +83,10 @@
     const who = assignmentFor(section);
     const isOpen = expanded.has(section.n);
     const marker = markers[section.n];
-    const drivers = who.drivers.some(Boolean)
-      ? who.drivers.map((name, i) => name ? `<span>운전자 ${i + 1}: ${esc(name)}</span>` : "").join("")
-      : "운전자 미정";
+    const drivers = who.drivers
+      .map((name, i) => name ? `운전자 ${i + 1}: ${esc(name)}` : "")
+      .filter(Boolean)
+      .join(" / ") || "운전자 미정";
     const gpx = section.gpxPath
       ? `<a class="button gpx-button" href="${esc(section.gpxPath)}" download aria-label="${section.n}구간 GPX 다운로드">↓ GPX</a>`
       : `<button class="button gpx-button" type="button" disabled>미등록</button>`;
