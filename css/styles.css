@@ -87,7 +87,13 @@ h1, h2, p { margin-top: 0; }
 .route-table th, .route-table td { border-bottom: 1px solid var(--line); padding: 10px 8px; text-align: left; vertical-align: middle; }
 .route-table th { background: var(--head); color: var(--muted); font-size: 10px; font-weight: 750; white-space: nowrap; }
 .route-table th:first-child, .route-table th:nth-child(3), .route-table th:nth-child(9) { text-align: center; }
-.col-section { width: 6%; } .col-route { width: 16%; } .col-gpx { width: 6%; } .col-team { width: 13%; } .col-metric { width: 7%; } .col-time { width: 10%; } .col-difficulty { width: 7%; } .col-vehicle { width: 7%; } .col-assignment { width: 14%; }
+.route-table th:nth-child(5),
+.route-table th:nth-child(6),
+.route-table th:nth-child(7),
+.route-table td:nth-child(5),
+.route-table td:nth-child(6),
+.route-table td:nth-child(7) {text-align: center !important;}
+.col-section { width: 6%; } .col-route { width: 16%; } .col-gpx { width: 6%; } .col-team { width: 10%; } .col-metric { width: 7%; } .col-time { width: 10%; } .col-difficulty { width: 7%; } .col-vehicle { width: 7%; } .col-assignment { width: 14%; }
 .route-row:hover > td { background: var(--soft); }
 .section-cell { color: var(--accent); font-size: 15px; font-weight: 800; text-align: center !important; }
 .section-number { display: inline-flex; align-items: center; gap: 3px; }
@@ -109,6 +115,7 @@ h1, h2, p { margin-top: 0; }
 .badge-no { background: var(--red-soft); color: var(--red); }
 .gpx-button { min-height: 29px; padding: 4px 7px; font-size: 10px; }
 .assignment-cell { position: relative; min-width: 130px; padding-right: 54px !important; }
+/*.assignment small span {display: block;line-height: 1.5;}*/
 .edit-button { position: absolute; right: 6px; bottom: 7px; min-height: 25px; padding: 3px 6px; font-size: 10px; }
 .detail-row td { padding: 0; border-bottom: 2px solid #bdc9d5; background: #e9eef3; }
 .detail-layout { display: grid; grid-template-columns: minmax(260px, 1.1fr) minmax(250px, 1fr); gap: 11px; border-left: 4px solid #bdc9d5; padding: 13px 16px; }
